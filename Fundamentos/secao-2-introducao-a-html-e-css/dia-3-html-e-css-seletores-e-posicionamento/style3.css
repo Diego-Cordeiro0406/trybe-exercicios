@@ -1,0 +1,12 @@
+h1, p {
+    text-align: center;
+}
+li:hover{
+    background-color: deepskyblue;
+}
+li:active{
+    font-family: sans-serif;
+    font-size: 25px;
+}li{
+    list-style: none;
+}
