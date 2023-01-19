@@ -1,0 +1,27 @@
+li{
+font-size: 20px;
+}
+ol .impar{
+    background-color: yellow;
+    text-transform: uppercase;
+}
+.par{
+    color: green;
+    background-color: yellow;
+}
+h1, h3{
+    color: red;
+}
+h1.header{
+    font-size: 40px;
+    border: 1px black solid;
+}
+.negrito{
+    font-weight: bold;
+}
+ul .cor{
+color: blue;
+}
+.java{
+    background-color: pink;
+}
