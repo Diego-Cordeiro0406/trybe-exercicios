@@ -1,3 +1,22 @@
 div:hover{
     border-style:solid;
 }
+div:nth-child(odd){
+    font-style: italic;
+}
+div:nth-child(3){
+    color: red;
+}
+div:nth-child(4){
+    color: blue;
+}
+div:nth-child(5){
+    color: rgb(90, 146, 187);
+    font-size: 30px;
+}
+div:nth-child(6){
+    color: rgb(117, 48, 48);
+}
+div:nth-child(7){
+    color: rgb(245, 227, 24);
+}
