@@ -25,3 +25,6 @@ color: blue;
 .java{
     background-color: pink;
 }
+.hover:hover{
+    font-weight: bold;
+}
