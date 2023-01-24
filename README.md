@@ -19,3 +19,18 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [☑️] 2-1: _O que é e para que serve?_
 - [☑️] 2-2: _Entendendo os comandos_
 - [☑️] 2-3: _Internet - Entendendo como ela funciona
+
+##### Bloco 3: HTML & CSS
+
+- [] 3.1: _Estruturas de páginas
+- [] 3.2: _Primeiros passos em CSS
+- [] 3.3: _Seletores e posicionamento
+- [] 3.4: _HTML semântico
+
+##### Bloco 4: Javascript
+
+- [] 4.1: _Primeiros passos
+- [] 4.2: _Array e loop For
+- [] 4.3: _Lógica de programação e algoritimos
+- [] 4.4: _Objetos e Funções
+- [] 4.5: _Javascript ES6-let, const, arrow functions e templates literals
