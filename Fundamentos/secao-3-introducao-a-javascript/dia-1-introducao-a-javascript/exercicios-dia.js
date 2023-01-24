@@ -75,4 +75,4 @@
 // const valorCustoTotal = valorVenda - 2;
 // const lucro = valorVenda - valorCustoTotal;
 // console.log("lucro final: " + lucro)
-
+  
