@@ -12,18 +12,40 @@
 
 //console.log("A jogadora possui " + player.medalhas)
 
-let info = {
-    personagem: 'Margarida',
-    origem: 'Pato Donald',
-    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-  };
+// let info = {
+//     personagem: 'Margarida',
+//     origem: 'Pato Donald',
+//     nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+//   };
 
   //console.log("Bem vinda, " + info.personagem)
 
-  info['recorrente'] = 'sim'
-  //console.log(info)
+//info['recorrente'] = 'sim'
+//console.log(info)
 
 //   for (let index in info){
 // console.log(index)
 //   }
   
+// for (let index in info){
+//     console.log(info[index])
+//       }
+
+// let info2 = {
+//     personagem: 'Tio Patinhas',
+//     origem: 'Christmas on Bear Mountain, Dells Four Color Comics #178',
+//     nota: 'O último MacPatinhas',
+//     recorrente: "sim"
+//   };
+
+// for(let index in info){
+//     if(index === "recorrente" &&
+//     info[index] === "sim" &&
+//     info2[index] === "sim"
+//     ){
+//         console.log("Ambos recorrentes")
+//     }else{
+//         console.log(info[index] + " e " + info2[index])
+//     }
+// }
+
