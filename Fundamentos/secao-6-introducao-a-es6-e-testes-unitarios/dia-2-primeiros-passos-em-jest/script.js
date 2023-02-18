@@ -7,5 +7,6 @@ function myRemove(arr, item) {
     }
     return newArr;
   }
-  // console.log(myRemove([1, 2, 3, 4], 5))
+
+  
   module.exports = myRemove;
