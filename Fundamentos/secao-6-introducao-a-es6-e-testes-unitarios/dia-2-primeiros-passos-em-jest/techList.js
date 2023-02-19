@@ -13,5 +13,4 @@ for(let i = 0; i < newObj.length; i += 1) {
 return vetor;
 }
 
-console.log(techList(['react', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'))
 module.exports = techList;
