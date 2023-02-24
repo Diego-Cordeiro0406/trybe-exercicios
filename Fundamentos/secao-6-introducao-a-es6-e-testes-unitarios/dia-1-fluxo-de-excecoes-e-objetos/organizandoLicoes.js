@@ -62,5 +62,21 @@ function showStudents(obj) {
 showStudents(allLessons);
 
 function getValueByNumber(obj, indice) {
-
+  let keys = Object.values(obj)[indice];
+  return keys
 }
+
+getValueByNumber(lesson1, 0);
+
+function verifyPair(obj, key, value) {
+  const entries = Object.entries(obj);
+  let igual = false;
+  for(let i in entries) {
+if(entries[i][0] === key && entries[i][1] === value){
+  igual = true;
+}
+  }
+  return igual;
+}
+
+console.log(verifyPair(lesson1, 'turno', 'manhã'))
