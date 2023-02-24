@@ -19,51 +19,50 @@ const lesson1 = {
   };
 
 function addT(obj, key, value) {
-    obj[key] = value
+    obj[key] = value;
    
   }
 
   addT(lesson2, 'turno', 'noite');
-//   console.log(lesson2)
 
 function listKeys(obj) {
  let keys = Object.keys(obj);
- return keys
+ return keys;
 }
 
-listKeys(lesson1)
+listKeys(lesson1);
 
 function objLength(obj) {
     let keys = Object.keys(obj).length;
-    return keys
+    return keys;
    }
    
-   objLength(lesson1)
+   objLength(lesson1);
 
 function listValues(obj) {
   let values = Object.values(obj);
 
-  return values
+  return values;
 }
 
-listValues(lesson1)
+listValues(lesson1);
 
-let allLessons = Object.assign({},{lesson1, lesson2, lesson3})
+let allLessons = Object.assign({},{lesson1, lesson2, lesson3});
 
 function showStudents(obj) {
   let students = 0;
   const keys = Object.keys(obj);
   for(i in keys) {
-    students += obj[keys[i]].numeroEstudantes
+    students += obj[keys[i]].numeroEstudantes;
   }
-  return students
+  return students;
 } 
 
 showStudents(allLessons);
 
 function getValueByNumber(obj, indice) {
   let keys = Object.values(obj)[indice];
-  return keys
+  return keys;
 }
 
 getValueByNumber(lesson1, 0);
@@ -79,4 +78,39 @@ if(entries[i][0] === key && entries[i][1] === value){
   return igual;
 }
 
-console.log(verifyPair(lesson1, 'turno', 'manhã'))
+verifyPair(lesson1, 'turno', 'manhã');
+
+function countStudents(obj) {
+  let total = 0;
+  const keys = Object.keys(obj);
+  for(let i in keys) {
+  if(obj[keys[i]].materia === 'Matemática') {
+    total += obj[keys[i]].numeroEstudantes;
+  }
+  }
+  return total;
+}
+
+countStudents(allLessons);
+
+function getInfo(obj, value) {
+  const allLessons = [];
+  let allStudent = 0;
+  const values = Object.values(obj);
+  for(let i in values) {
+    if(values[i].professor === value) {
+      allLessons.push(values[i].materia);
+      allStudent += values[i].numeroEstudantes;
+    }
+  }
+  return {aulas: allLessons, estudantes: allStudent}
+}
+
+function createReport(allLessons, value) {
+  const report = {};
+  report.professor = value;
+  Object.assign(report, getInfo(allLessons, value));
+  return report;
+}
+
+console.log(createReport(allLessons, 'Maria Clara'));
