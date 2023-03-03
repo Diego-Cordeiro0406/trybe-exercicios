@@ -58,6 +58,8 @@
 //   console.log(verifyAges(people, 18));
 //   console.log(verifyAges(people, 14));
 
+//exercício 1...
+
 const personMail = (nome) =>{
     const email = nome.toLowerCase().replace(' ', '_')
    return {nome, email:`${email}@trybe.com`}
@@ -72,4 +74,13 @@ const newEmployees = (callback) => {
     return employees;
   };
 
-  console.log(newEmployees(personMail))
+//exercício 2...
+
+const numCheck = (meuNum, num) => meuNum === num;
+
+const sorteio = (meuNum, callback) => {
+  const number = Math.floor((Math.random() * 5) + 1);
+
+  return callback(meuNum, number) ? 'parabéns, você ganhou' : 'tente novamente'
+};
+
