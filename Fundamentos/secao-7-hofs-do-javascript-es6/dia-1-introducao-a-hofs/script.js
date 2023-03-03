@@ -58,6 +58,20 @@
 //   console.log(verifyAges(people, 18));
 //   console.log(verifyAges(people, 14));
 
+// SORT EXAMPLES...
+
+// const people = [
+//   { name: 'Mateus', age: 18 },
+//   { name: 'José', age: 16 },
+//   { name: 'Ana', age: 23 },
+//   { name: 'Cláudia', age: 20 },
+//   { name: 'Bruna', age: 19 },
+// ];
+
+// people.sort((a, b) => b.age > a.age ? 1 : -1)
+
+// console.log(people);
+
 //exercício 1...
 
 const personMail = (nome) =>{
