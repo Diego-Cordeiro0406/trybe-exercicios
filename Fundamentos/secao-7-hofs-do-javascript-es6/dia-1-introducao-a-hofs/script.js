@@ -98,3 +98,25 @@ const sorteio = (meuNum, callback) => {
   return callback(meuNum, number) ? 'parabéns, você ganhou' : 'tente novamente'
 };
 
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const compararRespostas = (rCertas, alunosR) => {
+  if(alunosR === rCertas) {
+    return 1;
+  } else if(alunosR === 'N.A') {
+    return 0;
+  }
+  return - 0, 5;
+}
+
+const contarPontos = (rCertas, alunosR, acao) => {
+  let contador = 0;
+  for(let index = 0; index < rCertas.length; index += 1) {
+    const retorno = acao(rCertas[index], alunosR[index]);
+    contador += retorno;
+  }
+  return `Resultado final: ${contador} pontos`
+}
+
+// console.log(contarPontos(RIGHT_ANSWERS, STUDENT_ANSWERS, compararRespostas))
