@@ -1,0 +1,34 @@
+body {
+    background-color: lightslategrey;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    color: white;
+    background-color: blueviolet;
+    max-width: 600px;
+    border-radius: 5%;
+    padding: 10px 30px;
+}
+
+h2 {
+   background-color: rgb(113, 68, 155);
+   border-radius: 5px;
+   padding: 10px;
+}
+
+button {
+    color: rgb(68, 57, 57);
+    font-size: 15px;
+    background-color: greenyellow;
+    padding: 10px 10px;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+}
