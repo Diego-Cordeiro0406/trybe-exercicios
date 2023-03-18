@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    background-color: darkgrey;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+#img {
+    width: 200px;
+    height: 300px;
+    border-radius: 5%;
+}
+
+#button {
+    background-color: greenyellow;
+    padding: 10px 30px;
+    border: 0 none;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
