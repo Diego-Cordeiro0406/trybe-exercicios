@@ -1,0 +1,93 @@
+  version: '3'
+  services:
+    wordpress:
+      image: wordpress:php8.0
+      restart: always
+      ports:
+       - 8080:80
+      depends_on: 
+       - db
+      environment: 
+        WORDPRESS_DB_HOST: db:3306
+        WORDPRESS_DB_USER: wordpress
+        WORDPRESS_DB_PASSWORD: wordpress
+        WORDPRESS_DB_NAME: wordpress
+    # frontend:
+    #    build: frontend/
+    #    ports:
+    #     - 8080:3000
+    #    volumes: 
+    #     - ./frontend/src:/frontend/src
+      
+
+  # version: '3'
+  # services:
+  #   ghost:
+  #     image: ghost:1-alpine
+  #     restart: always
+  #     ports:
+  #      - 2368:2368
+  #     depends_on: 
+  #      - "db"
+  #     environment:
+  #       database__client: mysql
+  #       database__connection__host: db
+  #       database__connection__user: root
+  #       database__connection__password: password
+  #       database__connection__database: ghost
+  #     networks:
+  #      - my-network
+   
+    db:
+      image: mysql:5.7.40
+      restart: always
+      environment: 
+        # MYSQL_ROOT_PASSWORD: password
+        MYSQL_ROOT_PASSWORD: somewordpress
+        MYSQL_DATABASE: wordpress
+        MYSQL_USER: wordpress
+        MYSQL_PASSWORD: wordpress
+      volumes: 
+       - db_data:/var/lib/mysql
+  #      - /var/lib/mysql
+  #     networks: 
+  #      - my-network
+       
+  # networks:
+  #  my-network:
+  # frontend:
+  #  build: frontend/
+  #  restart: always
+  #  ports:
+  #   - 3000:3000
+#    depends_on:
+#     - backend
+#    volumes:
+#     - ./frontend/src:/frontend/src
+#    networks: 
+#     - rede-virtualx
+#   backend:
+#    build: backend/
+#    restart: always
+#    ports:
+#     - 3001:3001
+#    environment: 
+#     - DB_HOST=database
+#    depends_on:
+#     - database
+#    networks: 
+#     - rede-virtualx
+#     - rede-virtualy
+#   database:
+#    image: betrybe/docker-compose-example-database:v1
+#    restart: always
+#    networks: 
+#     - rede-virtualy
+
+
+# networks: 
+#   rede-virtualx:
+#   rede-virtualy:
+
+  volumes: 
+    db_data: {}
