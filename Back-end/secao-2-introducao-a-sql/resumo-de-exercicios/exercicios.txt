@@ -1,0 +1,185 @@
+-dia 1-
+SELECT 'Diego' AS nome, 'Cordeiro' AS sobrenome, 'Petrolina' AS cidade, 25 AS idade
+SELECT now() as 'Data Atual'
+USE sakila;
+SELECT * FROM city;
+SELECT first_name, last_name FROM customer
+SELECT * FROM rental;
+SELECT title, description, release_year FROM film;
+SELECT CONCAT(first_name,' ', last_name) AS full_name FROM actor;
+SELECT CONCAT(title, ' ', release_year) AS Lancamento do filme FROM film;
+SELECT CONCAT(address, ', ',district ) AS Endereco FROM address;
+CREATE DATABASE `Escola`
+USE Escola;
+CREATE TABLE IF NOT EXISTS Escola.Estudantes(`Nome` VARCHAR(7) CHARACTER SET utf8mb4, `Idade` INT);
+INSERT INTO Estudantes VALUES('Amanda', 30), ('Roberto', 45), ('Carol', 19), ('Amanda', 27)
+USE sakila;
+SELECT COUNT(first_name) FROM staff
+SELECT * FROM rental LIMIT 10;
+SELECT * FROM actor LIMIT 10 OFFSET 4;
+
+-dia 2-
+
+-- EXERCICIOS DO DIA
+-- Exercicio 1
+SELECT 'This SQL Exercise, Pratice and solution';
+-- exercicio 2
+SELECT 1, 2 ,4;
+-- exercicio 3
+SELECT 10 + 5;
+-- Exercicio 4
+SELECT '7 - 2x3 + 1x(-4) = ?';
+-- exercicio 5
+USE Scientists;
+SELECT * FROM Scientists;
+-- exercicio 6
+SELECT Name AS 'Nome do projeto',' ', hour,' ','Tempo de trabalho' FROM Projects;
+-- exercicio 7
+SELECT * FROM Scientists ORDER BY Name;
+-- exercicio 8 
+SELECT * FROM Projects ORDER BY Name DESC;
+-- exercicio 9
+SELECT CONCAT('O projeto',' ', Name,' ', 'precisou de',' ', Hour,' ', 'horas para ser concluido') FROM Projects;
+-- exercicio 10
+SELECT * FROM Projects ORDER BY Hour DESC LIMIT 3;
+-- exercicio 11
+SELECT DISTINCT Project FROM AssignedTo;
+-- exercicio 12
+SELECT * FROM Projects ORDER BY Hour DESC LIMIT 1;
+-- exercicio 13
+SELECT * FROM Projects ORDER BY Hour DESC LIMIT 1 OFFSET 1;
+-- exercicio 14
+SELECT * FROM Projects ORDER BY Hour ASC LIMIT 5;
+-- exercicio 15
+SELECT CONCAT('Existem',' ', COUNT(*),' ', 'Cientistas') FROM Scientists; 
+
+-dia 3-
+
+USE sakila;
+-- exemplo 1
+SELECT * FROM customer WHERE email = 'LEONARD.SCHOFIELD@sakilacustomer.org';
+-- exemplo 2
+SELECT first_name FROM customer WHERE active = 0 AND store_id = 2 AND first_name <> 'KENNETH';
+-- exemplo 3
+SELECT title, description, release_year, rating, replacement_cost FROM film
+WHERE replacement_cost > 18 AND rating = 'G' OR rating = 'PG' OR rating = 'PG-13'
+ORDER BY replacement_cost DESC, title ASC LIMIT 100;
+-- exemplo 4
+SELECT * FROM customer WHERE store_id = 1 AND active = 1;
+-- exemplo 5
+SELECT * FROM customer WHERE store_id = 1 AND active = 0;
+-- exemplo 6
+SELECT title, description, release_year, rating, rental_rate FROM film
+WHERE rating = 'NC-17'
+ORDER BY rental_rate, title LIMIT 50;
+-- exemplo 7
+SELECT * FROM film WHERE title LIKE '%ace%';
+-- exemplo 8
+SELECT * FROM film WHERE description LIKE '%china';
+-- exemplo 9
+SELECT * FROM film WHERE description LIKE '%girl%' AND title LIKE '%lord' LIMIT 2;
+-- exemplo 10
+SELECT * FROM film WHERE title LIKE '___gon%' LIMIT 2;
+-- exemplo 11
+SELECT * FROM film WHERE title LIKE '___gon%' AND description LIKE '%Documentary%' LIMIT 1;
+-- exemplo 12
+SELECT * FROM film WHERE title LIKE 'academy%' OR title LIKE 'mosquito%' LIMIT 2;
+-- exemplo 13
+SELECT * FROM film WHERE description LIKE '%monkey%' AND  description LIKE '%sumo%' LIMIT 6;
+-- exemplo 14
+SELECT first_name, last_name, email FROM customer
+WHERE last_name IN ('hicks', 'crawford', 'henry', 'boyd', 'mason', 'morales', 'kennedy');
+-- exemplo 15
+SELECT email FROM customer
+WHERE address_id IN (172, 173, 174, 175, 176) ORDER BY email;
+-- exemplo 16
+SELECT COUNT(*) FROM payment WHERE DATE(payment_date) BETWEEN '2005-05-01' AND '2005-08-01';
+-- exemplo 17
+SELECT title, release_year, rental_duration FROM film WHERE rental_duration BETWEEN 3 AND 6 ORDER BY rental_duration DESC, title;
+-- exemplo 18
+SELECT title, rating FROM film WHERE rating IN('G', 'PG', 'PG-13') ORDER BY title LIMIT 500;
+-- exemplo 19
+SELECT COUNT(*) FROM payment WHERE DATE(payment_date) LIKE '2005-05-25';
+-- exemplo 20
+SELECT COUNT(*) FROM payment WHERE DATE(payment_date) BETWEEN '2005-07-01' AND '2005-08-22';
+-- exemplo 21
+SELECT rental_date FROM rental WHERE rental_id = 10330;
+-- exemplo 22
+SELECT * FROM payment  WHERE payment_date BETWEEN '2005-07-28 22:00:00' AND '9999:12:31 23:59:59';
+
+-- EXERCICIOS DO DIA
+USE store;
+-- exercicio 1
+SELECT * FROM itens WHERE name LIKE 'GR%';
+-- exercicio 2
+SELECT * FROM supplies WHERE item_id = 2 ORDER BY supplier_id;
+-- exercicio 3
+SELECT item_id, price, supplier_id FROM supplies WHERE supplier_id LIKE '%N%';
+-- exercicio 4
+SELECT * FROM suppliers WHERE name LIKE '%LTDA%';
+-- exercicio 5
+SELECT COUNT(*) FROM suppliers WHERE id LIKE '%F%';
+-- exercicio 6
+SELECT * FROM supplies WHERE price > 15 AND price < 40;
+-- exercicio 7
+SELECT * FROM sales WHERE order_date BETWEEN '2018-04-15' AND '2019-07-30';
+
+-dia 4-
+
+USE sakila;
+-- exemplo 1
+INSERT INTO staff (first_name, last_name, email, address_id, username, store_id)
+VALUES('Geralt', 'De Rivia', 'geralt@teste.com', '1', 'geralt123', 1), ('Ogierd', 'Von Everec', 'ogierd@teste.com', '2', 'ogierd123', '2');
+-- exemplo 2
+INSERT INTO actor(first_name, last_name) SELECT first_name, last_name FROM customer LIMIT 5;
+-- exemplo 3
+INSERT INTO category (name) VALUES('testa'), ('testinha'), ('testadera');
+-- exemplo 4
+INSERT INTO store (address_id, manager_staff_id) VALUES (5, 1);
+-- exemplo 5
+SET SQL_SAFE_UPDATES = 0;
+-- exemplo 6
+UPDATE actor SET first_name = 'JULES' WHERE first_name = 'JULIA';
+-- exemplo 7
+UPDATE category SET name = 'Science Fiction' WHERE name = 'Sci-fi';
+-- exemplo 8
+UPDATE film SET replacement_cost = 25.00
+WHERE length >= 100 AND replacement_cost > 20.00 AND rating = 'G' OR rating = 'PG' OR rating = 'PG-13';
+-- exemplo 9
+UPDATE film SET replacement_cost = (
+CASE 
+  WHEN length <= 100 THEN 10.00
+  WHEN length > 100 THEN 20.00
+  ELSE replacement_cost
+  END);
+-- exemplo 10
+DELETE FROM film_actor WHERE actor_id = 12;
+DELETE FROM actor WHERE first_name = 'KARL';
+-- exemplo 11
+DELETE FROM film_actor WHERE actor_id IN (181);
+DELETE FROM actor WHERE first_name = 'MATTHEW';
+-- exemplo 12
+DELETE FROM film_text WHERE description LIKE '%saga%';
+-- exemplo 13
+TRUNCATE film_actor;
+TRUNCATE film_category;
+
+-- EXERCICIOS DO DIA
+USE pixar;
+-- exercicio 2
+INSERT INTO box_office(movie_id, rating, domestic_sales, international_sales) VALUES (16, 6.8, 450000000, 370000000);
+-- exercicio 3
+UPDATE movies SET director = 'Andrew Stanton' WHERE id = 16;
+-- exercicio 4
+UPDATE movies SET title = 'Ratatouille', year = 2007 WHERE id = 10;
+-- exercicio 5
+INSERT INTO box_office(movie_id, rating, domestic_sales, international_sales)
+VALUES (15, 8.5, 300000000, 250000000),
+       (17, 7.4, 460000000, 510000000),
+       (18, 9.9, 290000000, 280000000);
+-- exercicio 6
+DELETE FROM box_office WHERE movie_id = 18;
+DELETE FROM movies WHERE title = 'WALL-E';
+-- exercicio 7
+DELETE FROM box_office WHERE movie_id IN (8, 12, 13);
+DELETE FROM movies WHERE director = 'John Lasseter';
