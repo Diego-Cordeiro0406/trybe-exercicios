@@ -1,0 +1,95 @@
+-- EXEMPLOS --
+
+USE sakila;
+-- exemplo 1
+SELECT UCASE('trybe');
+-- exemplo 2
+SELECT REPLACE('A internet mudou o mundo', 'internet', 'IA');
+-- exemplo 3
+SELECT CHAR_LENGTH('Uma frase qualquer');
+-- exemplo 4
+SELECT SUBSTRING('A linguagem javascript está entre as mais usadas', 13, 10);
+-- exemplo 5
+SELECT LCASE('RUA NORTE 1500, RIO DE JANEIRO, BRASIL');
+-- exemplo 6
+SELECT film_id, title, 'filme visto?', IF(title = 'ACE GOLDFINGER', 'OK', 'FALTA ASSISTIR') FROM film;
+-- exemplo 7
+SELECT title, rating, 'grupo-alvo', 
+  CASE
+     WHEN rating = 'G' THEN 'livre para todas as idades'
+     WHEN rating = 'PG' THEN 'Maiores de 10 anos'
+     WHEN rating = 'PG-13' THEN 'Maiores de 13 anos'
+     WHEN rating = 'R' THEN 'Maiores de 17 anos'
+     ELSE 'Proibido para menores de idade'
+  END AS valor
+FROM film;
+-- exemplo 8
+SELECT RAND();
+SELECT ROUND(15 + (RAND() * 5));
+-- exemplo 9
+SELECT ROUND(15.7515971);
+-- exemplo 10
+SELECT FLOOR(39.494);
+-- exemplo 11
+SELECT CONCAT(CEIL(85.234), '%');
+-- exemplo 12
+SELECT CONCAT(DATEDIFF('2030-01-20', NOW()), ' ', 'DIAS') AS 'diferença de dias';
+-- exemplo 13
+SELECT CONCAT(TIMEDIFF('10:25:45', '11:00:00'), ' ', 'HORAS') AS 'diferença de horas';
+-- exemplo 14
+SELECT AVG(length) AS 'Média de duração',
+MIN(length) AS 'Duração minima',
+MAX(length) AS 'Duração maxima',
+SUM(length) AS 'Tempo de exibição total',
+COUNT(*) AS 'Filmes registrados' FROM film;
+-- exemplo 15
+SELECT rating, AVG(length) AS media FROM film
+GROUP BY rating HAVING media > 115.0 AND media < 121.50 ORDER BY media DESC;
+-- exemplo 16
+SELECT rating, SUM(replacement_cost) AS total FROM film GROUP BY rating HAVING total > 3950.50;
+
+-- EXERCICIOS DO DIA --
+
+USE hr;
+-- exercicio 1
+SELECT MAX(salary) FROM employees;
+-- exercicio 2
+SELECT MAX(salary) - MIN(salary) FROM employees;
+-- exercicio 3
+SELECT job_id, AVG(salary) AS 'média salarial' FROM employees GROUP BY job_id ORDER BY AVG(salary) DESC;
+-- exercicio 4
+SELECT SUM(salary) AS total FROM employees;
+-- exercicio 5
+SELECT MAX(salary) AS 'maior salario', MIN(salary) AS 'menor salario', SUM(salary) AS 'total', ROUND(AVG(salary), 2) AS 'média salarial'
+FROM employees;
+-- exercicio 6
+SELECT COUNT(job_id) FROM employees WHERE job_id = 'IT_PROG';
+-- exercicio 7
+SELECT job_id, SUM(salary) AS total FROM employees GROUP BY job_id;
+-- exercicio 8
+SELECT job_id, SUM(salary) AS total FROM employees WHERE job_id = 'IT_PROG';
+-- exercicio 9
+SELECT job_id, AVG(salary) AS total FROM employees
+GROUP BY job_id HAVING job_id <> 'IT_PROG' ORDER BY AVG(salary) DESC;
+-- exercicio 10
+SELECT AVG(salary) AS 'média salarial', COUNT(department_id) AS funcionarios
+FROM employees GROUP BY department_id HAVING funcionarios > 10;
+-- exercicio 11
+SELECT REPLACE(phone_number, '515', '777') FROM employees WHERE phone_number LIKE '515%';
+-- exercicio 12
+SELECT * FROM employees WHERE CHAR_LENGTH(first_name) >= 8;
+-- exercicio 13
+SELECT employee_id AS 'id do funcionario', first_name AS 'nome', YEAR(hire_date) AS 'ano de contratação'
+FROM employees;
+-- exercicio 14
+SELECT employee_id AS 'id do funcionario', first_name AS 'nome', DAY(hire_date) AS 'ano de contratação'
+FROM employees;
+-- exercicio 15
+SELECT employee_id AS 'id do funcionario', first_name AS 'nome', MONTH(hire_date) AS 'ano de contratação'
+FROM employees;
+-- exercicio 16
+SELECT UCASE(first_name) AS nome, UCASE(last_name) AS sobrenome  FROM employees;
+-- exercicio 17
+SELECT last_name, hire_date FROM employees WHERE hire_date LIKE '%1987-06%';
+-- exercicio 18
+SELECT first_name, last_name, DATEDIFF(CURRENT_DATE(), hire_date) AS dias_trabalhados FROM employees;
