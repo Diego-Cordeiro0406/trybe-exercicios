@@ -1,0 +1,51 @@
+-- EXEMPLOS --
+USE sakila;
+-- exemplo 1
+SELECT a.actor_id, a.first_name, f.actor_id FROM actor a INNER JOIN film_actor f ON a.actor_id = f.actor_id;
+-- exemplo 2
+SELECT s.first_name, s.last_name, a.address, a.address_id FROM staff s INNER JOIN address a ON s.address_id = a.address_id;
+-- exemplo 3
+SELECT cus.customer_id, cus.first_name, cus.email, addr.address, addr.address_id
+FROM customer AS cus INNER JOIN address AS addr ON cus.address_id = addr.address_id ORDER BY first_name LIMIT 100;
+-- exemplo 4
+SELECT cus.first_name, cus.email, addr.address_id, addr.address, addr.district
+FROM customer AS cus
+INNER JOIN address AS addr ON cus.address_id = addr.address_id
+WHERE district = 'California' AND first_name LIKE '%rene%' ORDER BY first_name;
+-- exemplo 5
+SELECT cus.first_name, cus.last_name, COUNT(r.customer_id)
+FROM customer AS cus INNER JOIN rental AS r  ON cus.customer_id = r.customer_id
+WHERE cus.active = 1 GROUP BY cus.customer_id ORDER BY cus.first_name, cus.last_name;
+-- exemplo 6
+SELECT st.first_name, st.last_name, AVG(p.amount)
+FROM staff AS st INNER JOIN payment AS p  ON st.staff_id = p.staff_id
+WHERE p.payment_date LIKE '%2006-%' GROUP BY st.first_name, st.last_name;
+-- exemplo 7
+SELECT ac.actor_id, ac.first_name, fa.film_id, fi.title
+FROM actor AS ac INNER JOIN film_actor AS fa ON ac.actor_id = fa.actor_id 
+INNER JOIN film AS fi ON fi.film_id = fa.film_id;
+-- exemplo 8
+SELECT emp.first_name, man.manager_id
+FROM employees AS emp INNER JOIN employees AS man ON emp.employee_id = man.manager_id
+WHERE emp.department_id <> man.department_id;
+-- exemplo 9
+SELECT man.first_name, COUNT(*)
+FROM employees AS man INNER JOIN employees AS emp ON emp.manager_id = man.employee_id GROUP BY man.employee_id;
+
+
+-- EXERCICIOS DO DIA --
+USE pixar;
+-- exercicio 1
+SELECT m.title, box.domestic_sales AS 'bilheteria domestica', box.international_sales AS 'bilheteria internacional'
+FROM movies AS m INNER JOIN box_office AS box ON m.id = box.movie_id;
+-- exercicio 2
+SELECT mov.title AS 'titulo', (box.domestic_sales + box.international_sales) AS 'bilheteria total'
+FROM box_office AS box INNER JOIN movies AS mov ON box.movie_id = mov.id WHERE international_sales > domestic_sales;
+-- exercicio 3
+SELECT mov.title AS titulo, rat.rating AS nota FROM movies AS mov INNER JOIN box_office AS rat ON mov.id = rat.movie_id ORDER BY rat.rating DESC;
+-- exercicio 4
+SELECT thr.name, thr. location, mov.title, mov.year
+FROM theater AS thr LEFT JOIN movies AS mov ON thr.id = mov.theater_id ORDER BY name;
+-- exercicio 5
+SELECT thr.name, thr.location, mov.title, mov.director, mov.length_minutes
+FROM theater AS thr RIGHT JOIN movies AS mov ON thr.id = mov.theater_id ORDER BY thr.name;
