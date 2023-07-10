@@ -1,0 +1,41 @@
+CREATE DATABASE IF NOT EXISTS zoologico;
+USE zoologico;
+CREATE TABLE animais (
+  animal_id INT NOT NULL PRIMARY KEY auto_increment,
+  nome VARCHAR(20) NOT NULL,
+  especie VARCHAR(50) NOT NULL,
+  sexo VARCHAR(10) NOT NULL,
+  idade INT NOT NULL,
+  localizacao VARCHAR(50) NOT NULL,
+  cuidado_por INT NOT NULL,
+  FOREIGN KEY (cuidado_por) REFERENCES cuidadores(cuidador_id)
+);
+
+CREATE TABLE cuidadores (
+  cuidador_id INT NOT NULL PRIMARY KEY auto_increment,
+  nome VARCHAR(50) NOT NULL,
+  email VARCHAR(50),
+  gerenciado_por INT NOT NULL,
+  FOREIGN KEY (gerenciado_por) REFERENCES gerentes(gerente_id)
+);
+
+CREATE TABLE gerentes (
+  gerente_id INT NOT NULL PRIMARY KEY auto_increment,
+  nome VARCHAR(50) NOT NULL,
+  email VARCHAR(50)
+);
+
+INSERT INTO animais(nome, especie, sexo, idade, localizacao, cuidado_por)
+  VALUES('Jack', 'leão', 'masculino', 15, 'zona 1', 1),
+        ('Vi', 'cavalo', 'feminino', 22, 'zona 2', 1),
+        ('Lara', 'arara', 'feminino', 3, 'zona 3', 2),
+        ('Zeca', 'urubu', 'masculino', 2, 'zona 4', 3);
+        
+INSERT INTO gerentes(nome, email)
+VALUES('Diego', 'diego@email.com'),
+      ('Ana', 'ana@email.com');
+
+INSERT INTO cuidadores(nome, email, gerenciado_por)
+  VALUES('Duca', 'duca@email.com', 1),
+		('Maria', 'maria@email.com', 1),
+        ('Eliza', 'eliza@email.com', 2);
