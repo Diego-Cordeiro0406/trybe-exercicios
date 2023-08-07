@@ -1,5 +1,5 @@
 const difficultyValidator = (req, res, next) => {
-   const { difficulty } = req.body.description;
+   const { difficulty } = req.body;
    
    if (difficulty === 'Fácil' || difficulty === 'Médio' || difficulty === 'Difícil') {
      return next();

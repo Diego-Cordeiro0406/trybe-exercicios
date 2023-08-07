@@ -1,5 +1,5 @@
 const ratingValidator = (req, res, next) => {
-    const { rating } = req.body.description;
+    const { rating } = req.body;
 
     const nan = Number(rating);
     if ((Number.isNaN(nan)) || (nan < 0) || (nan > 5)) {

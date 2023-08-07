@@ -2,7 +2,7 @@
   "name": "places-non-registered",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "mocha tests/**/*.test.js --exit",
     "start": "node src/server.js",
@@ -13,7 +13,8 @@
   "author": "Diego Cordeiro",
   "license": "ISC",
   "dependencies": {
-    "express": "4.17.1"
+    "express": "4.17.1",
+    "mysql2": "2.3.3"
   },
   "devDependencies": {
     "chai": "4.3.4",

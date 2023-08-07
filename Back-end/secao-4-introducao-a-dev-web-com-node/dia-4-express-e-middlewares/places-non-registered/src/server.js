@@ -1,3 +1,4 @@
 const app = require('./app');
+// const connection = require('./db/connection');
 
-app.listen(3001, () => console.log('server running on port 3001'));
+app.listen(3002, async () => console.log('API TrybePlaces está sendo executada na porta 3002'));
