@@ -84,8 +84,16 @@ const openTravels = async () => {
   return camelize(travelsFromDB);
 };
 
+const update = async (travelStatusId, driverId, travelId) => {
+  await connection.execute(
+    'UPDATE travels SET travel_status_id = ?, driver_id = ? WHERE id = ?',
+    [travelStatusId, driverId, travelId],
+  );
+};
+
 module.exports = {
     insert,
     findById,
     openTravels,
+    update,
 };
