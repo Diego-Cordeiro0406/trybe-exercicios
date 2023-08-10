@@ -1,6 +1,6 @@
 const express = require('express');
-const {
-  passengerModel, travelModel, driversModel } = require('./models');
+const { passengerModel, travelModel, driversModel } = require('./models');
+const carService = require('./services/car.services');
 
 const app = express();
 
@@ -74,58 +74,42 @@ app.post('/drivers', async (req, res) => {
 
     res.status(201).json(`motorista cadastrado com o id ${insertId}`);
 });
-  // app.patch('/drivers/:driverId/travels/:travelId', async (req, res) => {
-  //   const { driverId, travelId } = req.params;
-  //   const INCREMENT_STATUS = 1;
-  
-  //   const [[{ travel_status_id: travelStatusId }]] = await connection.execute(
-  //     `SELECT
-  //       TR.id,
-  //       TR.driver_id,
-  //       TR.starting_address,
-  //       TR.ending_address,
-  //       TR.request_date,
-  //       TR.travel_status_id,
-  //       TS.status,
-  //       WP.address,
-  //       WP.stop_order
-  //     FROM travels AS TR INNER JOIN travel_status AS TS 
-  //       ON TR.travel_status_id = TS.id
-  //     LEFT JOIN waypoints AS WP 
-  //       ON WP.travel_id = TR.id
-  //     WHERE TR.id = ?;`,
-  //     [travelId],
-  //   );
-  
-  //   const nextTravelStatusId = travelStatusId + INCREMENT_STATUS;
-  
-  //   await connection.execute(
-  //     'UPDATE travels SET travel_status_id = ?, driver_id = ? WHERE id = ?',
-  //     [nextTravelStatusId, driverId, travelId],
-  //   );
-  
-  //   const [travelsFromDB] = await connection.execute(
-  //     `SELECT
-  //       TR.id,
-  //       TR.driver_id,
-  //       TR.starting_address,
-  //       TR.ending_address,
-  //       TR.request_date,
-  //       TR.travel_status_id,
-  //       TS.status,
-  //       WP.address,
-  //       WP.stop_order
-  //     FROM travels AS TR INNER JOIN travel_status AS TS 
-  //       ON TR.travel_status_id = TS.id
-  //     LEFT JOIN waypoints AS WP 
-  //       ON WP.travel_id = TR.id
-  //     WHERE TR.id = ?;`,
-  //     [travelId],
-  //   );
-  
-  //   const travelWithWaypointsUpdated = groupWaypoints(camelize(travelsFromDB));
-  
-  //   res.status(200).json(travelWithWaypointsUpdated);
-  // });
+
+app.post('/cars', async (req, res) => {
+  const { model, licensePlate, year, color, driverId } = req.body;
+  const serviceResponse = await carService.createCar({
+    model, 
+    licensePlate, 
+    year, 
+    color, 
+    driverId,
+  });
+
+  if (serviceResponse.status !== 'SUCCESSFUL') {
+    return res.status(400).json(serviceResponse.data);
+  }
+  return res.status(201).json(serviceResponse.data);
+});
+
+app.get('/cars', async (_req, res) => {
+  const serviceResponse = await carService.findAll();
+  if (serviceResponse.status !== 'SUCCESSFUL') {
+    return res.status(400).json(serviceResponse.data);
+  }
+  return res.status(200).json(serviceResponse.data);
+});
+
+app.patch('/drivers/:driverId/travels/:travelId', async (req, res) => {
+  const { driverId, travelId } = req.params;
+
+  const { travelStatusId } = await travelModel.findById(travelId);
+  const INCREMENT_STATUS = 1;
+  const nextTravelStatusId = travelStatusId + INCREMENT_STATUS;
+
+  await travelModel.update(nextTravelStatusId, driverId, travelId);
+  const travel = await travelModel.findById(travelId);
+
+  res.status(200).json(travel);
+});
 
 module.exports = app;
