@@ -1,4 +1,4 @@
-const { addCarSchema } = require('./schemas');
+const { addCarSchema, addRequestTravelSchema, addDriverSchema } = require('./schemas');
 const { carsModel } = require('../../models');
 
 const validateNewCar = ({ model, licensePlate, year, color, driverId }) => {
@@ -21,8 +21,20 @@ const carExists = async (licensePlate) => {
   return car || false;
 };
 
+const validateRequestTravel = (keysObjectToValidate) => {
+  const { error } = addRequestTravelSchema.validate(keysObjectToValidate);
+  if (error) return { status: 'INVALID_VALUE', message: error.message };
+};
+
+const validateNewDriver = (objectToValidate) => {
+  const { error } = addDriverSchema.validate(objectToValidate);
+  if (error) return { status: 'INVALID_VALUE', message: error.message };
+};
+
 module.exports = {
   validateNewCar,
   isValidLicensePlateFormat,
   carExists,
+  validateRequestTravel,
+  validateNewDriver,
 };

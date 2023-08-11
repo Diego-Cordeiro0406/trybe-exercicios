@@ -104,7 +104,16 @@ const travelByStatusFromModel = [
   },
 ];
 
-
+const travelAcceptedFromModel = {
+  id: 1,
+  driverId: 1,
+  startingAddress: 'starting street',
+  endingAddress: 'end street',
+  requestDate: '2023-05-29T19:56:25.000Z',
+  travelStatusId: 2,
+  status: 'Aguardando Motorista',
+  waypoints: [],
+}
 
 module.exports = {
   travelIdFromDB,
@@ -115,4 +124,5 @@ module.exports = {
   travelWithWaypointsFromModel,
   travelByStatusFromDB,
   travelByStatusFromModel,
+  travelAcceptedFromModel,
 };
