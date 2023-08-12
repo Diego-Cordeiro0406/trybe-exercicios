@@ -109,7 +109,7 @@ describe('Realizando testes - TRAVEL SERVICE:', function () {
     sinon.stub(travelModel, 'openTravels').resolves([]);
 
     const responseService = await travelService.getOpenTravels();
-    expect(responseService.status).to.equal('SUCCESSFUL');
+    expect(responseService.status).to.equal('NOT_FOUND');
     expect(responseService.data.message).to.equal('There are no open trips');
   });
   it('Não aceita viagem se motorista não existe', async function () {

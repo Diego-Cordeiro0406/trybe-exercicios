@@ -115,6 +115,28 @@ const travelAcceptedFromModel = {
   waypoints: [],
 }
 
+
+const travelFromServiceSuccesssful = {
+  status: 'SUCCESSFUL',
+  data: travelByStatusFromModel,
+};
+const travelFromServiceCreated = {
+  status: 'CREATED',
+  data: travelFromModel,
+};
+const travelFromServiceInvalidValue = {
+  status: 'INVALID_VALUE',
+  data: { message: 'message' },
+};
+const travelFromServiceNotFound = {
+  status: 'NOT_FOUND',
+  data: { message: 'message' },
+};
+const travelFromServiceConflict = {
+  status: 'CONFLICT',
+  data: { message: 'message' },
+};
+
 module.exports = {
   travelIdFromDB,
   travelIdFromModel,
@@ -125,4 +147,8 @@ module.exports = {
   travelByStatusFromDB,
   travelByStatusFromModel,
   travelAcceptedFromModel,
+  travelFromServiceSuccesssful,
+  travelFromServiceCreated,
+  travelFromServiceInvalidValue,
+  travelFromServiceNotFound,
 };

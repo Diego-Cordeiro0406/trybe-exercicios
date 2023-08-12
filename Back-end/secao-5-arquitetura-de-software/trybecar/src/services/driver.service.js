@@ -22,7 +22,7 @@ const createDriver = async (driverDataObject) => {
   const insertDriver = await driversModel.insert(driverDataObject);
   const newDriver = await driversModel.findById(insertDriver);
 
-  return { status: 'SUCCESSFUL', data: newDriver };
+  return { status: 'CREATED', data: newDriver };
 };           
 
 module.exports = {

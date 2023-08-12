@@ -56,6 +56,33 @@ const driverFromModel = {
       "id": 1,
       "name": "Liana Cisneiros"
 }
+
+const driverByIdSuccesssful = {
+  status: 'SUCCESSFUL',
+  data: driverFromModel,
+};
+
+const driversFromServiceSuccesssful = {
+  status: 'SUCCESSFUL',
+  data: driversFromModel,
+};
+const driverFromServiceCreated = {
+  status: 'CREATED',
+  data: driverFromModel,
+};
+const driverFromServiceInvalidValue = {
+  status: 'INVALID_VALUE',
+  data: { message: 'message' },
+};
+const driverFromServiceNotFound = {
+  status: 'NOT_FOUND',
+  data: { message: 'message' },
+};
+const driverFromServiceConflict = {
+  status: 'CONFLICT',
+  data: { message: 'message' },
+};
+
   module.exports = {
     driversFromDB,
     driversFromModel,
@@ -63,4 +90,10 @@ const driverFromModel = {
     driverFromModel,
     driverIdFromDb,
     driverIdModel,
+    driversFromServiceSuccesssful,
+    driverFromServiceCreated,
+    driverFromServiceInvalidValue,
+    driverFromServiceNotFound,
+    driverFromServiceConflict,
+    driverByIdSuccesssful,
   };
