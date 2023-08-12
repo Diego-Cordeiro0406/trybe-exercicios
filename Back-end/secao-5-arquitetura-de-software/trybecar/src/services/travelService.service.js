@@ -15,8 +15,10 @@ const requestTravel = async (travelDataObject) => {
 
 const getOpenTravels = async () => {
   const WAITING_DRIVER = 1;
-  let data = await travelModel.openTravels(WAITING_DRIVER);
-  if (!data || data.length === 0) data = { message: 'There are no open trips' };
+  const data = await travelModel.openTravels(WAITING_DRIVER);
+  if (!data || data.length === 0) {
+   return { status: 'NOT_FOUND', data: { message: 'There are no open trips' } };
+  }
   
   return { status: 'SUCCESSFUL', data };
 };
