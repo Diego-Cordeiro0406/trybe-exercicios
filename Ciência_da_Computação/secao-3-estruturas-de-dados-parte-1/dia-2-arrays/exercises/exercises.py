@@ -40,6 +40,18 @@ def combinar_indices(list):
     return numero_de_combinacoes
 
 
+# Exercicio 4
+def entradas_e_saidas(target):
+    entradas = [1, 2, 3]
+    saidas = [3, 2, 7]
+    pessoas = 0
+    for index in range(len(entradas)):
+        if index <= target <= saidas[index]:
+            pessoas += 1
+    return pessoas
+
+
 print(calcular_instabilidades(valores_coletados))
 print(mesclar_cartas(cartas))
 print(combinar_indices(produtos))
+print(entradas_e_saidas(4))
