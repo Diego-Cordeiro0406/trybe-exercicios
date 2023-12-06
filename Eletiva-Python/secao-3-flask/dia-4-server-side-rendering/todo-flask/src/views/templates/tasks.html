@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo-Flask</title>
+</head>
+<body>
+  <main>
+    <h1>Todo Flask</h1>
+    <section>
+      <form action="" method="post">
+        <input type="text" name="task-input">
+        <button type="submit">Adicionar tarefa</button>
+      </form>
+    </section>
+    <section>
+      <ul>
+        {% for task in tasks %}
+        <li>
+          {{ task.title }}
+          {% if not task.completed %}
+          <form method="GET" action="/complete/{{ task.id }}">
+              <button type="submit">Concluir</button>
+          </form>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="container">
+  <header class="header">
+    <h1>Movies</h1>
+  </header>
+  <main class="main-container">
+      {% for movie in movies %}
+      <section class="movie-section">
+        <img src="{{ movie.poster }}" alt="poster">
+        <h3>{{ movie.title }}</h3>
+        <p>{{ movie.year }}</p>
+      </section>
+      {% endfor %}
+  </main>
+</body>
+</html>
