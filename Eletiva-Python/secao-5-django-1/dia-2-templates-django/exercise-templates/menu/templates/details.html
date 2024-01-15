@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Detalhes receitas
+{% endblock %}
+
+{% block content %}
+<h1>Detalhes</h1>
+<div>
+  <h2> {{ recipe.name }}</h2>
+  <p>{{ recipe.ingredients }}</p>
+  <p>{{ recipe.instructions }}</p>
+  <p>{{ recipe.created_at }}</p>
+  <p>{{ recipe.updated_at }}</p>
+</div>
+{% endblock %}
