@@ -1,0 +1,18 @@
+<!-- events/templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+  Receitas Django
+{% endblock %}
+
+{% block content %}
+<h1>Receitas Django</h1>
+{% for recipe in recipes %}
+<div>
+  <h2><a href="{% url 'details-page' recipe.id %}"> {{ recipe.name }} </a></h2>
+  <p>{{recipe.created_at}}</p>
+</div>
+{% empty %}
+  <p> Não existem receitas cadastradas </p>
+{% endfor %}
+{% endblock %}
