@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+<section>
+  <h2>Músicas</h2>
+  {% for music in musics %}
+        <p>{{music}}: {{music.singer}}</p>
+
+    {% endfor %}
+    <a href="{% url 'musics-page' %}">Adicionar nova música</a>
+</section>
+<section>
+  <h2>Artistas</h2>
+  {% for singer in singers %}
+    <p>{{singer}}</p>
+  {% endfor %}
+  <a href="{% url 'singer-page' %}">Adicionar novos artistas</a>
+</section>
+    
+{% endblock %}
