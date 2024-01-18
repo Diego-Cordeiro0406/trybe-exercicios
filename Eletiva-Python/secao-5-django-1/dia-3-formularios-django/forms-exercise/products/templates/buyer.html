@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Formulário para Novo Comprador
+{% endblock %}
+
+{% block content %}
+<form method="post" action="{% url 'buyer-page' %}">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="Submeter formulário">
+</form>
+{% endblock %}
