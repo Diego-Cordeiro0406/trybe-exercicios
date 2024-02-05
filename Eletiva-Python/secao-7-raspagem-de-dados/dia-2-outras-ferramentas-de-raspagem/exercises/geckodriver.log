@@ -1,0 +1,187 @@
+1706996368180	geckodriver	INFO	Listening on 127.0.0.1:35907
+1706996368187	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "48573" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilePsBHpE"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1706996369268	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1706996369444	Marionette	INFO	Listening on port 45971
+Read port: 45971
+WebDriver BiDi listening on ws://127.0.0.1:48573
+1706996369746	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:48573/devtools/browser/ed31d1ef-ef5a-4e51-84c1-049df1cb1e23
+1706996402524	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1706996479001	Marionette	INFO	Stopped listening on port 45971
+[Parent 87100, IPC I/O Parent] WARNING: waitid failed pid:87204 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 87100, IPC I/O Parent] WARNING: waitid failed pid:87357 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 87100, IPC I/O Parent] WARNING: waitid failed pid:87247 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 87100, IPC I/O Parent] WARNING: waitid failed pid:87275 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+1706996481112	geckodriver	INFO	Listening on 127.0.0.1:38071
+1706996481117	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "41909" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilehyk1pU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1706996481777	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1706996481920	Marionette	INFO	Listening on port 40921
+Read port: 40921
+WebDriver BiDi listening on ws://127.0.0.1:41909
+1706996482238	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:41909/devtools/browser/67089d81-cce4-404c-941e-914eb3321885
+1706996512889	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1706996635556	Marionette	INFO	Stopped listening on port 40921
+[Parent 87547, IPC I/O Parent] WARNING: waitid failed pid:87780 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 87547, IPC I/O Parent] WARNING: waitid failed pid:87672 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 87547, IPC I/O Parent] WARNING: waitid failed pid:87700 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 87547, IPC I/O Parent] WARNING: waitid failed pid:87623 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+1706996637304	geckodriver	INFO	Listening on 127.0.0.1:54481
+1706996637308	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "57005" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJ4j6Be"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1706996638048	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1706996638218	Marionette	INFO	Listening on port 45765
+Read port: 45765
+WebDriver BiDi listening on ws://127.0.0.1:57005
+1706996638509	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:57005/devtools/browser/3a4dd738-acf3-4dac-8a44-82535f132adf
+1706996668309	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1706996678835	Marionette	INFO	Stopped listening on port 45765
+[Parent 87995, IPC I/O Parent] WARNING: waitid failed pid:88224 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 87995, IPC I/O Parent] WARNING: waitid failed pid:88120 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 87995, IPC I/O Parent] WARNING: waitid failed pid:88148 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 87995, IPC I/O Parent] WARNING: waitid failed pid:88085 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+1706996680095	geckodriver	INFO	Listening on 127.0.0.1:54047
+1706996680100	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "56069" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiledURfPP"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1706996680804	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1706996680943	Marionette	INFO	Listening on port 36447
+Read port: 36447
+WebDriver BiDi listening on ws://127.0.0.1:56069
+1706996681260	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:56069/devtools/browser/cd155c8a-f0e3-448c-bc5a-e922219fa26c
+1706996711125	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1706996910273	Marionette	INFO	Stopped listening on port 36447
+[Parent 88333, IPC I/O Parent] WARNING: waitid failed pid:88578 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 88333, IPC I/O Parent] WARNING: waitid failed pid:88469 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 88333, IPC I/O Parent] WARNING: waitid failed pid:88497 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 88333, IPC I/O Parent] WARNING: waitid failed pid:88418 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+1706996912398	geckodriver	INFO	Listening on 127.0.0.1:41839
+1706996912403	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "41411" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileX0GZeM"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1706996913142	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1706996913289	Marionette	INFO	Listening on port 33397
+Read port: 33397
+WebDriver BiDi listening on ws://127.0.0.1:41411
+1706996913621	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:41411/devtools/browser/ec44baeb-6a23-4dc5-9d90-2a90e1acc959
+1706996945602	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1706997089668	Marionette	INFO	Stopped listening on port 33397
+[Parent 88902, IPC I/O Parent] WARNING: waitid failed pid:89135 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 88902, IPC I/O Parent] WARNING: waitid failed pid:89023 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 88902, IPC I/O Parent] WARNING: waitid failed pid:89053 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 88902, IPC I/O Parent] WARNING: waitid failed pid:88991 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+1707157802786	geckodriver	INFO	Listening on 127.0.0.1:50235
+1707157803284	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "33611" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilegANm4m"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+[Parent 6992, Unnamed thread 7f3d962343a0] WARNING: cache version is different 1 != 2: 'glib warning', file /builds/worker/checkouts/gecko/toolkit/xre/nsSigHandlers.cpp:187
+
+(firefox:6992): Gtk-WARNING **: 15:30:04.184: cache version is different 1 != 2
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707157804449	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707157804620	Marionette	INFO	Listening on port 36083
+Read port: 36083
+WebDriver BiDi listening on ws://127.0.0.1:33611
+1707157804934	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:33611/devtools/browser/4e5fc317-69ec-4a07-b683-35ce78aa878d
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4154806742347338, line 87: TagError: adsbygoogle.push() error: Warning: Do not add multiple property codes with AdSense tag to avoid seeing unexpected behavior. These codes were found on the page ca-pub-4154806742347338, ca-pub-4298533800014985
+JavaScript warning: https://pagead2.googlesyndication.com/bg/IHSjRKKj3q_1Pt3c2sGWHmUCy_Bw5n5yhKh9CWyZSw4.js line 2 > eval line 5323 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1707157834495	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://diolinux.com.br/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js, line 1: Script terminated by timeout at:
+c@https://diolinux.com.br/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js:1:9349
+
+1707161458921	Marionette	INFO	Stopped listening on port 36083
+[Parent 6992, IPC I/O Parent] WARNING: waitid failed pid:7096 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 6992, IPC I/O Parent] WARNING: waitid failed pid:7263 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 6992, IPC I/O Parent] WARNING: waitid failed pid:7177 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 6992, IPC I/O Parent] WARNING: waitid failed pid:7149 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+1707161469969	geckodriver	INFO	Listening on 127.0.0.1:58123
+1707161469973	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "50819" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilePtIA2b"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707161470638	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707161470788	Marionette	INFO	Listening on port 33463
+Read port: 33463
+WebDriver BiDi listening on ws://127.0.0.1:50819
+1707161471090	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:50819/devtools/browser/dc6d1852-71fa-4126-aedf-9947c5a780d2
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4298533800014985&host=ca-host-pub-2644536267352236, line 87: TagError: adsbygoogle.push() error: Warning: Do not add multiple property codes with AdSense tag to avoid seeing unexpected behavior. These codes were found on the page ca-pub-4154806742347338, ca-pub-4298533800014985
+JavaScript warning: https://pagead2.googlesyndication.com/bg/IHSjRKKj3q_1Pt3c2sGWHmUCy_Bw5n5yhKh9CWyZSw4.js line 2 > eval line 1628 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1707161503085	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://diolinux.com.br/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js, line 1: Script terminated by timeout at:
+c@https://diolinux.com.br/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js:1:9349
+
+1707161696488	Marionette	INFO	Stopped listening on port 33463
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Parent 9024, IPC I/O Parent] WARNING: waitid failed pid:9262 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 9024, IPC I/O Parent] WARNING: waitid failed pid:9180 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 9024, IPC I/O Parent] WARNING: waitid failed pid:9152 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 9024, IPC I/O Parent] WARNING: waitid failed pid:9104 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+1707161707947	geckodriver	INFO	Listening on 127.0.0.1:45501
+1707161707952	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "59407" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHjAcnp"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707161708670	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707161708802	Marionette	INFO	Listening on port 37349
+Read port: 37349
+WebDriver BiDi listening on ws://127.0.0.1:59407
+1707161709103	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:59407/devtools/browser/ef327ab7-40d1-438b-9ab7-d9c0388995ae
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4154806742347338, line 87: TagError: adsbygoogle.push() error: Warning: Do not add multiple property codes with AdSense tag to avoid seeing unexpected behavior. These codes were found on the page ca-pub-4154806742347338, ca-pub-4298533800014985
+JavaScript warning: https://pagead2.googlesyndication.com/bg/IHSjRKKj3q_1Pt3c2sGWHmUCy_Bw5n5yhKh9CWyZSw4.js line 2 > eval line 1817 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1707161741005	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://diolinux.com.br/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js, line 1: Script terminated by timeout at:
+c@https://diolinux.com.br/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js:1:9349
+
+1707161967963	Marionette	INFO	Stopped listening on port 37349
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Parent 9619, IPC I/O Parent] WARNING: waitid failed pid:9862 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 9619, IPC I/O Parent] WARNING: waitid failed pid:9783 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 9619, IPC I/O Parent] WARNING: waitid failed pid:9754 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+[Parent 9619, IPC I/O Parent] WARNING: waitid failed pid:9697 errno:10: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_posix.cc:244
+1707161970054	geckodriver	INFO	Listening on 127.0.0.1:33763
+1707161970058	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "47865" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHCP1eA"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707161970780	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707161970920	Marionette	INFO	Listening on port 33757
+Read port: 33757
+WebDriver BiDi listening on ws://127.0.0.1:47865
+1707161971244	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:47865/devtools/browser/43aba279-a364-4129-8a15-f2a2c2d0f972
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4298533800014985&host=ca-host-pub-2644536267352236, line 87: TagError: adsbygoogle.push() error: Warning: Do not add multiple property codes with AdSense tag to avoid seeing unexpected behavior. These codes were found on the page ca-pub-4154806742347338, ca-pub-4298533800014985
+JavaScript warning: https://pagead2.googlesyndication.com/bg/IHSjRKKj3q_1Pt3c2sGWHmUCy_Bw5n5yhKh9CWyZSw4.js line 2 > eval line 5047 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
